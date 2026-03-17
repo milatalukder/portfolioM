@@ -1,6 +1,6 @@
 body {
-    background-color: #061d23; /* Dark Teal Background like the image */
-    color: #e0e6e8;            /* Soft White Text */
+    background-color: #061d23; /* Dark Teal theme from your reference */
+    color: #e0e6e8;
     font-family: 'Inter', sans-serif;
     margin: 0;
     padding: 60px 20px;
@@ -10,24 +10,32 @@ body {
 }
 
 .container {
-    max-width: 700px;
+    max-width: 750px;
     width: 100%;
 }
 
 .main-title {
     font-family: 'Crimson Text', serif;
-    font-size: 3.5rem;
-    margin-bottom: 30px;
-    font-weight: 700;
+    font-size: 3rem;
+    margin: 0;
+    color: #ffffff;
+}
+
+.subtitle {
+    color: #4db8ff;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    margin-top: 5px;
 }
 
 .professional-bio {
     font-family: 'Crimson Text', serif;
-    font-size: 1.3rem;
+    font-size: 1.25rem;
     font-style: italic;
     color: #b0bfc3;
     text-align: justify;
-    margin-bottom: 40px;
+    margin: 40px 0;
 }
 
 .divider {
@@ -41,47 +49,68 @@ body {
     text-transform: uppercase;
     letter-spacing: 3px;
     color: #4db8ff;
-    margin-bottom: 25px;
+    margin-bottom: 30px;
 }
 
-.cert-item {
+/* Certificate Card Styling */
+.cert-card {
     display: flex;
-    justify-content: space-between;
+    gap: 20px;
+    background: rgba(255, 255, 255, 0.03);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
     align-items: center;
-    padding: 20px 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    transition: 0.3s;
 }
 
-.cert-info h3 {
+.cert-card:hover {
+    background: rgba(255, 255, 255, 0.06);
+    transform: translateY(-3px);
+}
+
+.cert-visual img {
+    width: 140px;
+    height: auto;
+    border-radius: 4px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+}
+
+.cert-details h3 {
     margin: 0;
     font-size: 1.2rem;
     color: #ffffff;
 }
 
-.cert-info p {
-    margin: 5px 0 0;
-    font-size: 0.85rem;
-    color: #8899a6;
+.cert-details p {
+    margin: 10px 0;
+    font-size: 0.9rem;
+    color: #94a3b8;
 }
 
-.view-link {
+.view-btn {
     color: #4db8ff;
     text-decoration: none;
-    font-size: 0.9rem;
-    border: 1px solid #4db8ff;
-    padding: 6px 15px;
-    border-radius: 4px;
-    transition: 0.3s;
+    font-size: 0.85rem;
+    font-weight: 600;
 }
 
-.view-link:hover {
-    background: #4db8ff;
-    color: #061d23;
+.view-btn:hover {
+    text-decoration: underline;
 }
 
 footer {
-    margin-top: 100px;
+    margin-top: 80px;
+    text-align: center;
     font-size: 0.8rem;
     color: #546675;
-    text-align: center;
+}
+
+/* Mobile Friendly */
+@media (max-width: 600px) {
+    .cert-card {
+        flex-direction: column;
+        text-align: center;
+    }
 }

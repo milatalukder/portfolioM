@@ -1,36 +1,87 @@
 body {
-    background-color: #0a191f; /* Dark teal/black background */
-    color: #e0e0e0;            /* Soft white text */
-    font-family: 'Georgia', serif; /* Or a clean sans-serif */
+    background-color: #061d23; /* Dark Teal Background like the image */
+    color: #e0e6e8;            /* Soft White Text */
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 60px 20px;
     display: flex;
     justify-content: center;
-    line-height: 1.6;
-    margin: 0;
-    padding: 40px 20px;
+    line-height: 1.8;
 }
 
 .container {
-    max-width: 600px; /* Keeps the text in a narrow, readable column */
-    text-align: left;
+    max-width: 700px;
+    width: 100%;
 }
 
-h1 {
-    font-size: 2.5rem;
-    border-bottom: 2px solid #1a3a44;
-    padding-bottom: 10px;
+.main-title {
+    font-family: 'Crimson Text', serif;
+    font-size: 3.5rem;
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+
+.professional-bio {
+    font-family: 'Crimson Text', serif;
+    font-size: 1.3rem;
+    font-style: italic;
+    color: #b0bfc3;
+    text-align: justify;
+    margin-bottom: 40px;
 }
 
 .divider {
     height: 1px;
-    background: #1a3a44;
-    margin: 30px 0;
+    background: rgba(255, 255, 255, 0.1);
+    margin: 40px 0;
 }
 
-a {
+.section-heading {
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #4db8ff;
+    margin-bottom: 25px;
+}
+
+.cert-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.cert-info h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #ffffff;
+}
+
+.cert-info p {
+    margin: 5px 0 0;
+    font-size: 0.85rem;
+    color: #8899a6;
+}
+
+.view-link {
     color: #4db8ff;
     text-decoration: none;
+    font-size: 0.9rem;
+    border: 1px solid #4db8ff;
+    padding: 6px 15px;
+    border-radius: 4px;
+    transition: 0.3s;
 }
 
-a:hover {
-    text-decoration: underline;
+.view-link:hover {
+    background: #4db8ff;
+    color: #061d23;
+}
+
+footer {
+    margin-top: 100px;
+    font-size: 0.8rem;
+    color: #546675;
+    text-align: center;
 }

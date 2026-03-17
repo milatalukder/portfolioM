@@ -1,0 +1,36 @@
+body {
+    background-color: #0a191f; /* Dark teal/black background */
+    color: #e0e0e0;            /* Soft white text */
+    font-family: 'Georgia', serif; /* Or a clean sans-serif */
+    display: flex;
+    justify-content: center;
+    line-height: 1.6;
+    margin: 0;
+    padding: 40px 20px;
+}
+
+.container {
+    max-width: 600px; /* Keeps the text in a narrow, readable column */
+    text-align: left;
+}
+
+h1 {
+    font-size: 2.5rem;
+    border-bottom: 2px solid #1a3a44;
+    padding-bottom: 10px;
+}
+
+.divider {
+    height: 1px;
+    background: #1a3a44;
+    margin: 30px 0;
+}
+
+a {
+    color: #4db8ff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}

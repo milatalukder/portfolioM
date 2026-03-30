@@ -14,7 +14,6 @@
         
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
         
-        /* কার্ড ডিজাইন যা বাটনকে নিচে রাখবে */
         .card { 
             border: 1px solid #efefef; 
             padding: 15px; 
@@ -23,7 +22,7 @@
             text-align: center; 
             display: flex; 
             flex-direction: column; 
-            justify-content: space-between; /* এটি বাটনকে নিচে ঠেলে দিবে */
+            justify-content: space-between; 
             transition: 0.3s; 
         }
         .card:hover { transform: translateY(-5px); box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
@@ -41,7 +40,7 @@
             border-radius: 5px; 
             font-size: 14px; 
             font-weight: bold; 
-            margin-top: auto; /* বাটনকে কার্ডের একদম নিচে লক করে দিবে */
+            margin-top: auto; 
         }
         .btn:hover { background: #2980b9; }
         

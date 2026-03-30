@@ -6,87 +6,102 @@
     <title>Mila Talukder | Portfolio</title>
     <style>
         body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; margin: 0; background-color: #f4f7f6; }
-        .container { max-width: 950px; margin: 30px auto; background: #fff; padding: 40px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
-        header { text-align: center; border-bottom: 2px solid #eee; padding-bottom: 30px; }
-        h1 { color: #1a2a6c; font-size: 2.5rem; margin-bottom: 5px; }
-        .subtitle { color: #0056b3; font-weight: bold; font-size: 1.1rem; }
+        .container { max-width: 900px; margin: 30px auto; background: #fff; padding: 35px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        header { text-align: center; border-bottom: 2px solid #eee; padding-bottom: 20px; margin-bottom: 30px; }
+        h1 { color: #2c3e50; margin-bottom: 10px; }
+        .intro { font-size: 1.1rem; color: #555; }
         
-        /* Progress & Specialization */
-        .spec-box { background: #ebf4ff; padding: 25px; border-radius: 12px; margin: 30px 0; border-left: 6px solid #0056b3; }
-        .progress-bar-bg { background: #d1d1d1; border-radius: 20px; height: 22px; width: 100%; margin: 15px 0; }
-        .progress-bar-fill { background: linear-gradient(90deg, #4CAF50, #8BC34A); width: 40%; height: 100%; border-radius: 20px; text-align: center; color: white; font-size: 13px; font-weight: bold; line-height: 22px; }
-
-        /* Projects Section */
-        .project-card { background: #f9f9f9; border: 1px solid #ddd; padding: 20px; border-radius: 10px; margin-top: 20px; display: flex; flex-wrap: wrap; gap: 20px; }
-        .terminal { background: #000; color: #0f0; padding: 15px; border-radius: 5px; font-family: 'Courier New', monospace; font-size: 13px; flex: 1; min-width: 250px; }
-        .project-desc { flex: 1; min-width: 250px; }
+        .section-title { color: #2c3e50; border-left: 5px solid #3498db; padding-left: 15px; margin: 35px 0 20px; }
+        
+        /* Project Section */
+        .project-card { background: #fdfdfd; border: 1px solid #eee; padding: 20px; border-radius: 10px; }
+        .terminal { background: #000; color: #0f0; padding: 15px; border-radius: 5px; font-family: 'Courier New', monospace; font-size: 13px; margin-top: 15px; }
 
         /* Grid for Certificates */
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-top: 30px; }
-        .card { border: 1px solid #eee; padding: 15px; border-radius: 10px; transition: 0.3s; background: #fff; text-align: center; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
+        .card { border: 1px solid #efefef; padding: 15px; border-radius: 10px; background: #fff; text-align: center; transition: 0.3s; }
         .card:hover { transform: translateY(-5px); box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
-        .cert-img { width: 100%; border-radius: 5px; border: 1px solid #f0f0f0; margin-bottom: 15px; }
-        .btn { display: inline-block; background: #0056b3; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; font-size: 14px; font-weight: bold; margin-top: 10px; }
+        .cert-img { width: 100%; border-radius: 5px; margin-bottom: 12px; background: #f9f9f9; }
+        
+        .btn { display: inline-block; background: #3498db; color: white; padding: 8px 16px; text-decoration: none; border-radius: 5px; font-size: 14px; font-weight: bold; margin-top: 10px; }
+        .btn:hover { background: #2980b9; }
 
-        footer { text-align: center; margin-top: 50px; color: #777; font-size: 14px; border-top: 1px solid #eee; padding-top: 20px; }
+        footer { text-align: center; margin-top: 50px; color: #aaa; font-size: 13px; border-top: 1px solid #eee; padding-top: 20px; }
     </style>
 </head>
 <body>
 
 <div class="container">
     <header>
-        <h1>Mila Talukder</h1>
-        <p class="subtitle">Aspiring Software Developer | Dedicated Learner</p>
-        <p>"Technology-এর জগতকে নতুনভাবে চেনা এবং স্কেলেবল সলিউশন তৈরির জন্য আমি প্রতিদিন শিখছি।"</p>
+        <h1>Hey, I'm Mila Talukder</h1>
+        <p class="intro">I'm learning new things every day. Here, I'm showing some of my achievements and projects that I've completed so far.</p>
     </header>
 
-    <section class="spec-box">
-        <h2 style="margin-top: 0;">🎓 Coursera Specialization</h2>
-        <p><strong>Python for Everybody</strong> | University of Michigan</p>
-        <div class="progress-bar-bg">
-            <div class="progress-bar-fill">40% COMPLETE</div>
-        </div>
-        <p style="font-size: 14px; color: #555;">বর্তমান অবস্থা: <strong>Python Data Structures</strong> (Course 2 of 5)</p>
-    </section>
-
     <section>
-        <h2>🐍 Featured Python Project</h2>
+        <h2 class="section-title">My Project</h2>
         <div class="project-card">
-            <div class="project-desc">
-                <h3>Student Grading System</h3>
-                <p>আমি Python-এর Variables, Input functions এবং Conditional logic (if-else) ব্যবহার করে এই grading system-টি তৈরি করেছি। এটি সরাসরি Command Prompt-এ রান করা যায়।</p>
-                <a href="https://github.com/milatalukder/pythonbasics" target="_blank" class="btn" style="background: #24292e;">View on GitHub →</a>
-            </div>
+            <h3>Student Grading System</h3>
+            <p>I built this simple project using Python. It takes a student's name and marks to calculate their grade based on conditional logic.</p>
             <div class="terminal">
                 > python grader.py<br>
                 Enter Student Name: MILA TALUKDER<br>
                 Enter marks: 97<br>
                 <span style="color: #fff;">Student: MILA TALUKDER | Marks: 97.0 | Grade: A+</span>
             </div>
+            <a href="https://github.com/milatalukder/pythonbasics" target="_blank" class="btn" style="background: #333;">View on GitHub</a>
         </div>
     </section>
 
-    <section style="margin-top: 40px;">
-        <h2 style="text-align: center;">📜 Verified Certifications</h2>
+    <section>
+        <h2 class="section-title">My Achievements</h2>
         <div class="grid">
-            <div class="card">
-                <img src="python_for_everybody.jpg" class="cert-img" alt="Coursera Python">
-                <h4>Programming for Everybody</h4>
-                <p>Coursera | University of Michigan</p>
-                <a href="PASTE_YOUR_COURSERA_VERIFY_LINK" target="_blank" class="btn">Verify Online</a>
+            
+            <div class="card" style="border-top: 3px solid #0056b3;">
+                <h4>Python for Everybody</h4>
+                <p>University of Michigan (Coursera)</p>
+                <a href="https://coursera.org/share/b053a2f44107ff7d73ed6f8a285e5150" target="_blank" class="btn">Verify Link</a>
             </div>
 
             <div class="card">
-                <img src="python_developer.jpg" class="cert-img" alt="Sololearn Python">
+                <img src="https://api2.sololearn.com/v2/certificates/CC-KPB9ZX6A/image/png" class="cert-img" alt="Certificate">
                 <h4>Python Developer</h4>
-                <p>Sololearn Certification</p>
-                <a href="#" class="btn">Verify Online</a>
+                <p>Sololearn</p>
+                <a href="https://api2.sololearn.com/v2/certificates/CC-KPB9ZX6A/image/png?t=639090520772799100" target="_blank" class="btn">View Certificate</a>
             </div>
+
+            <div class="card">
+                <img src="https://api2.sololearn.com/v2/certificates/CC-CUSACNEA/image/png" class="cert-img" alt="Certificate">
+                <h4>Web Development</h4>
+                <p>Sololearn</p>
+                <a href="https://api2.sololearn.com/v2/certificates/CC-CUSACNEA/image/png?t=639089722583619990" target="_blank" class="btn">View Certificate</a>
+            </div>
+
+            <div class="card">
+                <img src="https://api2.sololearn.com/v2/certificates/CC-EK4QSXGA/image/png" class="cert-img" alt="Certificate">
+                <h4>Intro to HTML</h4>
+                <p>Sololearn</p>
+                <a href="https://api2.sololearn.com/v2/certificates/CC-EK4QSXGA/image/png?t=639092631706671839" target="_blank" class="btn">View Certificate</a>
+            </div>
+
+            <div class="card">
+                <img src="https://api2.sololearn.com/v2/certificates/CC-L89GZ8GO/image/png" class="cert-img" alt="Certificate">
+                <h4>Intro to CSS</h4>
+                <p>Sololearn</p>
+                <a href="https://api2.sololearn.com/v2/certificates/CC-L89GZ8GO/image/png?t=639090620181829429" target="_blank" class="btn">View Certificate</a>
+            </div>
+
+            <div class="card">
+                <img src="https://api2.sololearn.com/v2/certificates/CC-6LXY9T2A/image/png" class="cert-img" alt="Certificate">
+                <h4>Intro to Python</h4>
+                <p>Sololearn</p>
+                <a href="https://api2.sololearn.com/v2/certificates/CC-6LXY9T2A/image/png?t=639091057725392539" target="_blank" class="btn">View Certificate</a>
+            </div>
+
         </div>
     </section>
 
     <footer>
-        <p>© 2026 Mila Talukder | Built for Scholarship Profile & Portfolio</p>
+        <p>Mila Talukder | 2026</p>
     </footer>
 </div>
 

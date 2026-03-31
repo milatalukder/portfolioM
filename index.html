@@ -12,49 +12,17 @@
         .intro { font-size: 1.1rem; color: #555; }
         .section-title { color: #2c3e50; border-left: 5px solid #3498db; padding-left: 15px; margin: 35px 0 20px; font-size: 1.5rem; }
         
-        /* Project Section */
-        .project-card { 
-            background: #fdfdfd; 
-            border: 1px solid #eee; 
-            padding: 25px; 
-            border-radius: 10px; 
-            display: flex; 
-            align-items: center; 
-            flex-wrap: wrap; 
-            gap: 20px; 
-            margin-bottom: 30px;
-        }
+        .project-card { background: #fdfdfd; border: 1px solid #eee; padding: 25px; border-radius: 10px; display: flex; align-items: center; flex-wrap: wrap; gap: 20px; margin-bottom: 20px; }
         .project-info { flex: 1; min-width: 250px; }
-        .terminal { 
-            background: #000; 
-            color: #0f0; 
-            padding: 20px 15px; 
-            border-radius: 8px; 
-            font-family: 'Courier New', monospace; 
-            font-size: 14px; 
-            max-width: 500px; 
-            margin-left: auto; 
-            border: 1px solid #333;
-            width: 100%; 
-        }
+        .terminal { background: #000; color: #0f0; padding: 20px 15px; border-radius: 8px; font-family: 'Courier New', monospace; font-size: 14px; max-width: 500px; margin-left: auto; border: 1px solid #333; width: 100%; }
         
-        /* Achievements Grid */
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
-        .card { 
-            border: 1px solid #efefef; 
-            padding: 20px; 
-            border-radius: 10px; 
-            background: #fff; 
-            display: flex; 
-            flex-direction: column; 
-            transition: 0.3s; 
-        }
+        .card { border: 1px solid #efefef; padding: 20px; border-radius: 10px; background: #fff; display: flex; flex-direction: column; transition: 0.3s; }
         .card:hover { transform: translateY(-5px); box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
         .cert-img { width: 100%; border-radius: 5px; margin-bottom: 15px; border: 1px solid #eee; }
         h4 { margin: 5px 0; color: #333; }
         .institution { color: #777; font-size: 0.9rem; margin-bottom: 10px; font-weight: bold; }
         
-        /* Link Display Styling */
         .verify-text { font-size: 0.8rem; color: #555; word-break: break-all; margin-top: auto; padding-top: 10px; }
         .verify-text a { color: #3498db; text-decoration: none; font-weight: 500; }
         .verify-text a:hover { text-decoration: underline; }
@@ -66,23 +34,38 @@
 
 <div class="container">
     <header>
-        <h1>Hello! I'm Mila Talukder</h1>
-        <p class="intro">I'm learning new things every day. Here are my achievements and projects.</p>
+        <h1>Hey, I'm Mila Talukder</h1>
+        <p class="intro">I'm learning new things every day. Here are my projects and achievements.</p>
     </header>
 
     <section>
-        <h2 class="section-title">My Project</h2>
+        <h2 class="section-title">My Projects</h2>
+        
         <div class="project-card">
             <div class="project-info">
                 <h3>Student Grading System</h3>
                 <p>A Python project that calculates grades based on user input for names and marks.</p>
-                <a href="https://github.com/milatalukder/pythonbasics" target="_blank" style="color: #333; font-weight: bold; font-size: 0.9rem;">View on GitHub</a>
+                <a href="https://github.com/milatalukder/pythonbasics" target="_blank" style="color: #333; font-weight: bold;">View on GitHub</a>
             </div>
             <div class="terminal">
                 > python grader.py<br>
                 Enter Student Name: MILA TALUKDER<br>
                 Enter marks: 97<br>
                 <span style="color: #fff;">Student: MILA TALUKDER | Marks: 97.0 | Grade: A+</span>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="project-info">
+                <h3>INR to BDT Converter</h3>
+                <p>A Python script that converts Indian Rupees to Bangladeshi Taka using static exchange rates.</p>
+                <a href="https://github.com/milatalukder/pythonbasics" target="_blank" style="color: #333; font-weight: bold;">View on GitHub</a>
+            </div>
+            <div class="terminal">
+                > python converter.py<br>
+                Enter amount in Rupee (INR): 100<br>
+                Converting to BDT...<br>
+                <span style="color: #fff;">Result: 100 INR = 140.00 BDT</span>
             </div>
         </div>
     </section>
@@ -92,45 +75,45 @@
         <div class="grid">
             
             <div class="card" style="border-top: 3px solid #0056b3;">
-                <img src="python_for_everybody.jpeg" class="cert-img" alt="Python For Everybody">
+                <img src="python_for_everybody.jpeg" class="cert-img" alt="Coursera">
                 <h4>Python for Everybody</h4>
                 <p class="institution">University of Michigan (Coursera)</p>
                 <p class="verify-text">Verify at: <a href="https://coursera.org/share/b053a2f44107ff7d73ed6f8a285e5150" target="_blank">https://coursera.org/share/b053a2f44107ff7d73ed6f8a285e5150</a></p>
             </div>
 
             <div class="card">
-                <img src="python dev.jpeg" class="cert-img" alt="Python Developer">
+                <img src="python dev.jpeg" class="cert-img" alt="Sololearn">
                 <h4>Python Developer</h4>
                 <p class="institution">Sololearn</p>
-                <p class="verify-text">Verify at: <a href="https://api2.sololearn.com/v2/certificates/CC-KPB9ZX6A/image/png?t=639090520772799100" target="_blank">https://api2.sololearn.com/v2/certificates/CC-KPB9ZX6A/image/png?t=639090520772799100</a></p>
+                <p class="verify-text">Verify at: <a href="https://api2.sololearn.com/v2/certificates/CC-KPB9ZX6A/image/png?t=639090520772799100"</a></p>
             </div>
 
             <div class="card">
-                <img src="web.jpeg" class="cert-img" alt="Web Development">
+                <img src="web.jpeg" class="cert-img" alt="Sololearn">
                 <h4>Web Development</h4>
                 <p class="institution">Sololearn</p>
-                <p class="verify-text">Verify at: <a href="https://api2.sololearn.com/v2/certificates/CC-CUSACNEA/image/png?t=639089722583619990" target="_blank">https://api2.sololearn.com/v2/certificates/CC-CUSACNEA/image/png?t=639089722583619990</a></p>
+                <p class="verify-text">Verify at: <a href="https://api2.sololearn.com/v2/certificates/CC-CUSACNEA/image/png?t=639089722583619990"</a></p>
             </div>
 
             <div class="card">
-                <img src="intro html.jpeg" class="cert-img" alt="Intro to HTML">
+                <img src="intro html.jpeg" class="cert-img" alt="Sololearn">
                 <h4>Introduction to HTML</h4>
                 <p class="institution">Sololearn</p>
-                <p class="verify-text">Verify at: <a href="https://api2.sololearn.com/v2/certificates/CC-EK4QSXGA/image/png?t=639092631706671839" target="_blank">https://api2.sololearn.com/v2/certificates/CC-EK4QSXGA/image/png?t=639092631706671839</a></p>
+                <p class="verify-text">Verify at: <a href="https://api2.sololearn.com/v2/certificates/CC-EK4QSXGA/image/png?t=639092631706671839"</a></p>
             </div>
 
             <div class="card">
-                <img src="intro css.jpeg" class="cert-img" alt="Intro to CSS">
+                <img src="intro css.jpeg" class="cert-img" alt="Sololearn">
                 <h4>Introduction to CSS</h4>
                 <p class="institution">Sololearn</p>
-                <p class="verify-text">Verify at: <a href="https://api2.sololearn.com/v2/certificates/CC-L89GZ8GO/image/png?t=639090620181829429" target="_blank">https://api2.sololearn.com/v2/certificates/CC-L89GZ8GO/image/png?t=639090620181829429</a></p>
+                <p class="verify-text">Verify at: <a href="https://api2.sololearn.com/v2/certificates/CC-L89GZ8GO/image/png?t=639090620181829429"</a></p>
             </div>
 
             <div class="card">
-                <img src="intro python.jpeg" class="cert-img" alt="Intro to Python">
+                <img src="intro python.jpeg" class="cert-img" alt="Sololearn">
                 <h4>Introduction to Python</h4>
                 <p class="institution">Sololearn</p>
-                <p class="verify-text">Verify at: <a href="https://api2.sololearn.com/v2/certificates/CC-6LXY9T2A/image/png?t=639091057725392539" target="_blank">https://api2.sololearn.com/v2/certificates/CC-6LXY9T2A/image/png?t=639091057725392539</a></p>
+                <p class="verify-text">Verify at: <a href="https://api2.sololearn.com/v2/certificates/CC-6LXY9T2A/image/png?t=639091057725392539"</a></p>
             </div>
 
         </div>

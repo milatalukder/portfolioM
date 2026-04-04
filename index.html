@@ -73,7 +73,7 @@
             padding-bottom: 10px;
         }
 
-        /* Project Layout (Your requested style) */
+        /* Project Layout */
         .project-row {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -106,7 +106,7 @@
             font-size: 0.9rem;
             box-shadow: 0 20px 40px rgba(0,0,0,0.1);
         }
-        .terminal-cmd { color: #50fa7b; } /* Dracula green for commands */
+        .cmd { color: #50fa7b; }
 
         /* Achievements Grid */
         .cert-grid {
@@ -116,18 +116,28 @@
             margin-bottom: 120px;
         }
         .cert-card { text-align: left; }
+        .cert-img-container {
+            width: 100%;
+            height: 220px;
+            overflow: hidden;
+            border: 1px solid var(--border);
+            margin-bottom: 20px;
+            background: #f9f9f9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
         .cert-img { 
-            width: 100%; 
-            height: 220px; 
-            object-fit: cover; 
-            border: 1px solid var(--border); 
-            margin-bottom: 20px; 
+            max-width: 100%; 
+            max-height: 100%; 
+            object-fit: contain; 
             filter: grayscale(100%);
             transition: 0.4s;
         }
         .cert-card:hover .cert-img { filter: grayscale(0%); }
         .cert-card h4 { font-family: 'Playfair Display', serif; font-size: 1.3rem; margin: 0; }
         .cert-card p { font-size: 0.8rem; color: var(--muted); text-transform: uppercase; margin-top: 5px; }
+        .verify-link { font-size: 0.8rem; font-weight: 700; color: #000; text-decoration: none; margin-top: 10px; display: inline-block; }
 
         footer {
             text-align: center;
@@ -138,7 +148,6 @@
             letter-spacing: 2px;
         }
 
-        /* Mobile Adjustments */
         @media (max-width: 850px) {
             h1 { font-size: 3rem; }
             .project-row { grid-template-columns: 1fr; gap: 30px; }
@@ -167,19 +176,19 @@
         </div>
     </header>
     
-   <section id="projects">
+    <section id="projects">
         <h2 class="section-header">Technical Builds</h2>
 
         <div class="project-row">
             <div class="project-info">
                 <h3>Student Grading System</h3>
                 <p>A logic-based Python script that processes student names and marks to assign grades automatically.</p>
-                <a href="https://milatalukder.github.io/pythonbasics/" target="_blank" class="github-link">View Source Code</a>
+                <a href="https://github.com/milatalukder/pythonbasics/blob/main/grader.py" target="_blank" class="github-link">View Source Code</a>
             </div>
             <div class="terminal-box">
                 <span class="cmd">> python grading_system.py</span><br>
                 Enter Student Name: MILA TALUKDER<br>
-                Enter marks (0-100):97<br>
+                Enter marks (0-100): 97<br>
                 <strong>Student: MILA TALUKDER | Marks: 97.0 | Grade: A+</strong>
             </div>
         </div>
@@ -188,7 +197,7 @@
             <div class="project-info">
                 <h3>Password Generator</h3>
                 <p>Utilizes Python's 'random' and 'string' modules to generate secure, complex passwords based on user length input.</p>
-                <a href="https://milatalukder.github.io/passwordgenerator/" target="_blank" class="github-link">View Source Code</a>
+                <a href="https://github.com/milatalukder/passwordgenerator/blob/main/password_gen.py" target="_blank" class="github-link">View Source Code</a>
             </div>
             <div class="terminal-box">
                 <span class="cmd">> python password_gen.py</span><br>
@@ -201,7 +210,7 @@
             <div class="project-info">
                 <h3>Number Guessing Game</h3>
                 <p>An interactive game that uses loops and conditional logic to guide the user in guessing a random number.</p>
-                <a href="https://milatalukder.github.io/number_guessing/" target="_blank" class="github-link">View Source Code</a>
+                <a href="https://github.com/milatalukder/number_guessing/blob/main/guessing_game.py" target="_blank" class="github-link">View Source Code</a>
             </div>
             <div class="terminal-box">
                 <span class="cmd">> python guessing_game.py</span><br>
@@ -216,7 +225,7 @@
             <div class="project-info">
                 <h3>INR to BDT Converter</h3>
                 <p>A precision currency utility with error handling to convert Indian Rupees to Bangladeshi Taka.</p>
-                <a href="https://milatalukder.github.io/currency/" target="_blank" class="github-link">View Source Code</a>
+                <a href="https://github.com/milatalukder/currency/blob/main/converter.py" target="_blank" class="github-link">View Source Code</a>
             </div>
             <div class="terminal-box">
                 <span class="cmd">> python converter.py</span><br>

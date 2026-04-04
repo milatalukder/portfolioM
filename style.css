@@ -1,101 +1,47 @@
-/* --- Global Styles --- */
-body {
-    background-color: #0d1117; /* GitHub Dark Background */
-    color: #c9d1d9;
-    font-family: 'Inter', sans-serif;
-    line-height: 1.6;
-    padding: 60px 20px;
-}
+/* --- New Diversity Styles --- */
 
-.container {
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-/* --- Section Heading --- */
-.section-heading {
-    font-size: 0.9rem;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    color: #58a6ff; /* Accent Blue */
-    margin-bottom: 40px;
-}
-
-/* --- Project Layout (Side-by-Side) --- */
-.project-row {
-    display: flex; /* This creates the horizontal alignment */
-    justify-content: space-between;
-    align-items: center;
-    gap: 40px;
-    margin-bottom: 60px;
-    padding-bottom: 40px;
-    border-bottom: 1px solid #30363d;
-}
-
-.project-info {
-    flex: 1;
-}
-
-.project-info h3 {
-    font-size: 1.8rem;
-    color: #ffffff;
-    margin-bottom: 15px;
-}
-
-/* Terminal Style Box */
-.terminal-box {
+/* Skills Dashboard */
+.skill-dashboard {
     flex: 1.2;
-    background-color: #010409; /* Deeper black */
-    padding: 25px;
-    border-radius: 8px;
-    border: 1px solid #30363d;
-    font-family: 'Fira Code', 'Courier New', monospace;
-    font-size: 0.85rem;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-}
-
-.cmd {
-    color: #7ee787; /* Command Green */
-}
-
-/* --- Certification Cards (The "Half-Image" Fix) --- */
-.cert-card {
-    display: flex;
-    gap: 20px;
-    background: rgba(255, 255, 255, 0.03);
-    padding: 20px;
+    background: #161b22;
+    padding: 30px;
     border-radius: 12px;
     border: 1px solid #30363d;
-    align-items: center;
-    margin-bottom: 20px;
+}
+.skill-item { margin-bottom: 25px; }
+.skill-label { 
+    display: flex; 
+    justify-content: space-between; 
+    margin-bottom: 10px; 
+    font-size: 0.85rem; 
+    color: #8b949e; 
+}
+.progress-bar { 
+    width: 100%; 
+    height: 8px; 
+    background: #30363d; 
+    border-radius: 10px; 
+    overflow: hidden; 
+}
+.progress-fill { 
+    height: 100%; 
+    background: #58a6ff; 
+    border-radius: 10px; 
 }
 
-.cert-visual {
-    flex-shrink: 0;
-    width: 140px; /* Fixed width for the image box */
-    height: 90px;  /* Fixed height for the image box */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #161b22;
-    border-radius: 4px;
-    overflow: hidden;
+/* Logic Map Card */
+.logic-card {
+    flex: 1.2;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
 }
-
-.cert-visual img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain; /* CRITICAL: This prevents the image from being cut/cropped */
-}
-
-/* --- Mobile Responsiveness --- */
-@media (max-width: 850px) {
-    .project-row {
-        flex-direction: column; /* Stack vertically on small screens */
-        text-align: center;
-    }
-    .cert-card {
-        flex-direction: column;
-        text-align: center;
-    }
+.logic-step {
+    background: rgba(88, 166, 255, 0.1);
+    border: 1px dashed #58a6ff;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #58a6ff;
 }

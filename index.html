@@ -4,176 +4,215 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mila Talukder | Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg-color: #fdfdfd;
-            --text-color: #2c3e50;
-            --accent-color: #1a1a1a;
-            --border-light: #ececec;
-            --terminal-bg: #1a1a1a;
+            --bg: #ffffff;
+            --text: #1a1a1a;
+            --muted: #666;
+            --border: #eeeeee;
+            --terminal: #1a1a1a;
         }
 
         html { scroll-behavior: smooth; }
-
         body { 
-            font-family: 'Georgia', serif; 
-            line-height: 1.8; 
-            color: var(--text-color); 
+            font-family: 'Inter', sans-serif; 
+            color: var(--text); 
+            background: var(--bg); 
             margin: 0; 
-            background-color: var(--bg-color); 
+            line-height: 1.8; 
         }
+
+        .container { max-width: 1000px; margin: 0 auto; padding: 0 40px; }
 
         /* Navigation */
         nav {
-            position: sticky;
-            top: 0;
-            background: rgba(255, 255, 255, 0.98);
-            padding: 20px 0;
-            border-bottom: 1px solid var(--border-light);
-            text-align: center;
-            z-index: 1000;
+            padding: 30px 0;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .nav-links a {
+            margin-left: 25px;
+            text-decoration: none;
+            color: var(--text);
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
         }
 
-        nav a {
-            margin: 0 15px;
-            text-decoration: none;
-            color: var(--accent-color);
-            font-weight: bold;
-            text-transform: uppercase;
+        /* Hero / About Section */
+        header { padding: 120px 0 80px; text-align: left; }
+        h1 { 
+            font-family: 'Playfair Display', serif; 
+            font-size: 4rem; 
+            margin: 0 0 40px; 
+            letter-spacing: -1px;
+        }
+        .statement {
+            font-size: 1.2rem;
+            max-width: 850px;
+            border-left: 3px solid #000;
+            padding-left: 35px;
+            color: var(--text);
+            font-weight: 400;
+            letter-spacing: 0.2px;
+        }
+        .statement strong { color: #000; font-weight: 600; }
+
+        /* Section Title */
+        .section-header {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            margin: 100px 0 50px;
+            border-bottom: 1px solid #000;
+            display: inline-block;
+            width: 100%;
+            padding-bottom: 10px;
+        }
+
+        /* Project Layout (Your requested style) */
+        .project-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            padding: 60px 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .project-info h3 { 
+            font-family: 'Playfair Display', serif; 
+            font-size: 2rem; 
+            margin: 0 0 20px; 
+        }
+        .project-info p { color: var(--muted); font-size: 1.05rem; margin-bottom: 25px; }
+        .github-link { 
+            font-weight: 700; 
+            color: #000; 
+            text-decoration: none; 
+            border-bottom: 2px solid #000;
+            padding-bottom: 2px;
+        }
+
+        .terminal-box {
+            background: var(--terminal);
+            color: #e0e0e0;
+            padding: 35px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        .terminal-cmd { color: #50fa7b; } /* Dracula green for commands */
+
+        /* Achievements Grid */
+        .cert-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+            margin-bottom: 120px;
+        }
+        .cert-card { text-align: left; }
+        .cert-img { 
+            width: 100%; 
+            height: 220px; 
+            object-fit: cover; 
+            border: 1px solid var(--border); 
+            margin-bottom: 20px; 
+            filter: grayscale(100%);
+            transition: 0.4s;
+        }
+        .cert-card:hover .cert-img { filter: grayscale(0%); }
+        .cert-card h4 { font-family: 'Playfair Display', serif; font-size: 1.3rem; margin: 0; }
+        .cert-card p { font-size: 0.8rem; color: var(--muted); text-transform: uppercase; margin-top: 5px; }
+
+        footer {
+            text-align: center;
+            padding: 80px 0;
+            border-top: 1px solid var(--border);
+            color: #999;
             font-size: 0.8rem;
             letter-spacing: 2px;
         }
 
-        /* Container */
-        .container { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
-
-        header { text-align: center; padding: 120px 0 80px; }
-        h1 { font-family: 'Playfair Display', serif; font-size: 3.5rem; margin-bottom: 15px; color: var(--accent-color); }
-        .about-text { max-width: 700px; margin: 0 auto; font-size: 1.2rem; color: #666; font-style: italic; }
-
-        .section-title { 
-            font-family: 'Playfair Display', serif;
-            text-align: center;
-            font-size: 2.5rem;
-            margin: 100px 0 50px;
-            padding-bottom: 15px;
-            border-bottom: 1px solid var(--accent-color);
-            display: inline-block;
-            width: 100%;
+        /* Mobile Adjustments */
+        @media (max-width: 850px) {
+            h1 { font-size: 3rem; }
+            .project-row { grid-template-columns: 1fr; gap: 30px; }
+            header { padding: 60px 0; }
         }
-
-        /* Projects */
-        .project-card { 
-            background: #fff; 
-            border: 1px solid var(--border-light); 
-            padding: 35px; 
-            display: flex; 
-            align-items: center; 
-            flex-wrap: wrap; 
-            gap: 40px; 
-            margin-bottom: 40px; 
-        }
-        .project-info { flex: 1; min-width: 300px; }
-        .project-info h3 { font-family: 'Playfair Display', serif; font-size: 1.8rem; color: var(--accent-color); margin-top: 0; }
-        
-        .terminal { 
-            background: var(--terminal-bg); 
-            color: #dcdcdc; 
-            padding: 25px; 
-            border-radius: 4px; 
-            font-family: 'Courier New', monospace; 
-            font-size: 14px; 
-            flex: 1.2;
-            min-width: 320px;
-            border: 1px solid #333; 
-        }
-
-        /* Achievements Grid */
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-bottom: 80px; }
-        .card { border: 1px solid var(--border-light); padding: 20px; background: #fff; display: flex; flex-direction: column; }
-        .cert-img { width: 100%; height: 220px; object-fit: cover; margin-bottom: 20px; border: 1px solid #eee; }
-        .institution { color: #999; font-size: 0.75rem; text-transform: uppercase; font-weight: bold; }
-        .verify-text { font-size: 0.85rem; margin-top: auto; padding-top: 15px; border-top: 1px solid #f9f9f9; }
-        .verify-text a { color: var(--accent-color); font-weight: bold; text-decoration: none; }
-
-        /* Footer */
-        footer { text-align: center; padding: 60px; background: #f9f9f9; border-top: 1px solid var(--border-light); color: #aaa; font-size: 11px; letter-spacing: 3px; }
-
-        @media (max-width: 768px) { h1 { font-size: 2.5rem; } .terminal { min-width: 100%; } }
     </style>
 </head>
 <body>
 
-<nav>
-    <a href="#about">About</a>
-    <a href="#projects">Projects</a>
-    <a href="#achievements">Achievements</a>
-</nav>
-
 <div class="container">
+    <nav>
+        <div style="font-weight: 600; letter-spacing: 3px;">MILA TALUKDER</div>
+        <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#projects">Work</a>
+            <a href="#certs">Certs</a>
+        </div>
+    </nav>
+
     <header id="about">
-        <h1>Mila Talukder</h1>
-        <div class="about-text">
-            <p>Driven by a commitment to mastering core computation, I began my journey with Python to establish a strong logical framework, later expanding into Web Technologies to understand digital architecture. Every line of code and certification earned marks a milestone in my self-directed evolution. Fully aware of the vast landscape ahead, my objective is to transition this foundation into a rigorous academic environment in Computer Science & Engineering, where I can contribute to and grow within the rapidly evolving tech industry.</p>
+        <h1>Evolution.</h1>
+        <div class="statement">
+            Driven by a commitment to mastering core computation, I began my journey with <strong>Python</strong> to establish a strong logical framework, later expanding into <strong>Web Technologies</strong> to understand digital architecture. Every line of code and certification earned marks a milestone in my self-directed evolution. 
+            <br><br>
+            Fully aware of the vast landscape ahead, my objective is to transition this foundation into a <strong>rigorous academic environment in Computer Science & Engineering</strong>, where I can contribute to and grow within the rapidly evolving tech industry.
         </div>
     </header>
-
+    
     <section id="projects">
-        <h2 class="section-title">Selected Projects</h2>
-        
-        <div class="project-card">
+        <h2 class="section-header">Selected Builds</h2>
+
+        <div class="project-row">
             <div class="project-info">
                 <h3>Student Grading System</h3>
-                <p>Python script to automate academic performance grading.</p>
-                <a href="https://milatalukder.github.io/pythonbasics/" target="_blank" style="color: #000; font-weight: bold;">GitHub</a>
+                <p>An automated logic processor built in Python for academic performance evaluation.</p>
+                <a href="https://milatalukder.github.io/pythonbasics/" class="github-link">GitHub</a>
             </div>
-            <div class="terminal">
-                > python grader.py<br>
+            <div class="terminal-box">
+                <span class="terminal-cmd">> python grader.py</span><br>
                 Enter Name: MILA TALUKDER<br>
-                <span style="color: #fff;">Grade: A+</span>
+                Processing academic data...<br>
+                Status: Complete | <strong>Grade: A+</strong>
             </div>
         </div>
 
-        <div class="project-card">
+        <div class="project-row">
             <div class="project-info">
                 <h3>Password Generator</h3>
-                <p>Generates secure, randomized passwords for digital safety.</p>
-                <a href="https://milatalukder.github.io/passwordgenerator/" target="_blank" style="color: #000; font-weight: bold;">GitHub</a>
+                <p>Cryptographically secure string generation for enhanced digital safety.</p>
+                <a href="https://milatalukder.github.io/passwordgenerator/" class="github-link">GitHub</a>
             </div>
-            <div class="terminal">
-                <span style="color: #00FF00;">> python password_gen.py</span><br>
-                Length: 12<br>
-                <span style="color: #fff;">Output: wb)Oi^W25#,]</span>
+            <div class="terminal-box">
+                <span class="terminal-cmd">> python password_gen.py</span><br>
+                Input Length: 12<br>
+                Generating entropy...<br>
+                <strong>Output: wb)Oi^W25#,]</strong>
             </div>
         </div>
 
-        <div class="project-card">
+        <div class="project-row">
             <div class="project-info">
                 <h3>INR to BDT Converter</h3>
-                <p>Currency utility for Indian Rupee to Bangladeshi Taka.</p>
-                <a href="https://milatalukder.github.io/currency/" target="_blank" style="color: #000; font-weight: bold;">GitHub</a>
+                <p>Precision-focused currency utility for financial data conversion.</p>
+                <a href="https://milatalukder.github.io/currency/" class="github-link">GitHub</a>
             </div>
-            <div class="terminal">
-                > python converter.py<br>
-                INR: 100 | <span style="color: #fff;">Result: 140.00 BDT</span>
-            </div>
-        </div>
-
-        <div class="project-card">
-            <div class="project-info">
-                <h3>Number Guessing Game</h3>
-                <p>Logic game utilizing random numbers and while loops.</p>
-                <a href="https://milatalukder.github.io/number_guessing/" target="_blank" style="color: #000; font-weight: bold;">GitHub</a>
-            </div>
-            <div class="terminal">
-                <span style="color: #00FF00;">> python guess_game.py</span><br>
-                Guess: 50 | <span style="color: #ffcc00;">Too low!</span><br>
-                Guess: 62 | <span style="color: #00FF00;">Correct!</span>
+            <div class="terminal-box">
+                <span class="terminal-cmd">> python converter.py</span><br>
+                Rate: Static | Base: INR<br>
+                Calculation: 100 * 1.40<br>
+                <strong>Result: 140.00 BDT</strong>
             </div>
         </div>
     </section>
-
+    
     <section id="achievements">
         <h2 class="section-title">Certifications</h2>
         <div class="grid">

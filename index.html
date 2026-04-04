@@ -167,48 +167,62 @@
         </div>
     </header>
     
-    <section id="projects">
-        <h2 class="section-header">Selected Builds</h2>
+   <section id="projects">
+        <h2 class="section-header">Technical Builds</h2>
 
         <div class="project-row">
             <div class="project-info">
                 <h3>Student Grading System</h3>
-                <p>An automated logic processor built in Python for academic performance evaluation.</p>
-                <a href="https://milatalukder.github.io/pythonbasics/" class="github-link">GitHub</a>
+                <p>A logic-based Python script that processes student names and marks to assign grades automatically.</p>
+                <a href="https://milatalukder.github.io/pythonbasics/" target="_blank" class="github-link">View Source Code</a>
             </div>
             <div class="terminal-box">
-                <span class="terminal-cmd">> python grader.py</span><br>
-                Enter Name: MILA TALUKDER<br>
-                Processing academic data...<br>
-                Status: Complete | <strong>Grade: A+</strong>
+                <span class="cmd">> python grading_system.py</span><br>
+                Enter Student Name: MILA TALUKDER<br>
+                Enter marks (0-100): 85<br>
+                <strong>Student: MILA TALUKDER | Marks: 85.0 | Grade: A+</strong>
             </div>
         </div>
 
         <div class="project-row">
             <div class="project-info">
                 <h3>Password Generator</h3>
-                <p>Cryptographically secure string generation for enhanced digital safety.</p>
-                <a href="https://milatalukder.github.io/passwordgenerator/" class="github-link">GitHub</a>
+                <p>Utilizes Python's 'random' and 'string' modules to generate secure, complex passwords based on user length input.</p>
+                <a href="https://milatalukder.github.io/passwordgenerator/" target="_blank" class="github-link">View Source Code</a>
             </div>
             <div class="terminal-box">
-                <span class="terminal-cmd">> python password_gen.py</span><br>
-                Input Length: 12<br>
-                Generating entropy...<br>
-                <strong>Output: wb)Oi^W25#,]</strong>
+                <span class="cmd">> python password_gen.py</span><br>
+                Enter password length: 12<br>
+                <strong>Generated Password: wb)Oi^W25#,]</strong>
+            </div>
+        </div>
+
+        <div class="project-row">
+            <div class="project-info">
+                <h3>Number Guessing Game</h3>
+                <p>An interactive game that uses loops and conditional logic to guide the user in guessing a random number.</p>
+                <a href="#" target="_blank" class="github-link">View Source Code</a>
+            </div>
+            <div class="terminal-box">
+                <span class="cmd">> python guessing_game.py</span><br>
+                Welcome to Number Guessing Game!<br>
+                Guess a number between 1 and 100: 50<br>
+                Too low! Try again.<br>
+                <strong>Congratulations! You guessed it in 5 attempts.</strong>
             </div>
         </div>
 
         <div class="project-row">
             <div class="project-info">
                 <h3>INR to BDT Converter</h3>
-                <p>Precision-focused currency utility for financial data conversion.</p>
-                <a href="https://milatalukder.github.io/currency/" class="github-link">GitHub</a>
+                <p>A precision currency utility with error handling to convert Indian Rupees to Bangladeshi Taka.</p>
+                <a href="https://milatalukder.github.io/currency/" target="_blank" class="github-link">View Source Code</a>
             </div>
             <div class="terminal-box">
-                <span class="terminal-cmd">> python converter.py</span><br>
-                Rate: Static | Base: INR<br>
-                Calculation: 100 * 1.40<br>
-                <strong>Result: 140.00 BDT</strong>
+                <span class="cmd">> python converter.py</span><br>
+                --- Welcome to the INR to BDT Converter ---<br>
+                Enter amount in Indian Rupee (INR): 100<br>
+                <strong>[Result] 100.0 INR is equal to 140.00 BDT</strong>
             </div>
         </div>
     </section>

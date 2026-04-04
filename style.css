@@ -1,6 +1,72 @@
-/* --- New Diversity Styles --- */
+/* --- Global Styles --- */
+body {
+    background-color: #0d1117; 
+    color: #c9d1d9;
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    padding: 60px 20px;
+    margin: 0;
+}
 
-/* Skills Dashboard */
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* --- Section Heading --- */
+.section-header {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    margin: 100px 0 50px;
+    border-bottom: 1px solid #30363d;
+    display: inline-block;
+    width: 100%;
+    padding-bottom: 10px;
+    color: #ffffff;
+}
+
+/* --- Project Layout --- */
+.project-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 60px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #30363d;
+}
+
+.project-info {
+    flex: 1;
+}
+
+.project-info h3 {
+    font-size: 1.8rem;
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+.github-link {
+    font-weight: 700;
+    color: #58a6ff;
+    text-decoration: none;
+    border-bottom: 1px solid #58a6ff;
+}
+
+/* --- Terminal Style --- */
+.terminal-box {
+    flex: 1.2;
+    background-color: #010409;
+    padding: 25px;
+    border-radius: 8px;
+    border: 1px solid #30363d;
+    font-family: 'Fira Code', monospace;
+    font-size: 0.85rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+.cmd { color: #7ee787; }
+
+/* --- Skills Dashboard (New) --- */
 .skill-dashboard {
     flex: 1.2;
     background: #161b22;
@@ -8,40 +74,43 @@
     border-radius: 12px;
     border: 1px solid #30363d;
 }
-.skill-item { margin-bottom: 25px; }
-.skill-label { 
-    display: flex; 
-    justify-content: space-between; 
-    margin-bottom: 10px; 
-    font-size: 0.85rem; 
-    color: #8b949e; 
-}
-.progress-bar { 
-    width: 100%; 
-    height: 8px; 
-    background: #30363d; 
-    border-radius: 10px; 
-    overflow: hidden; 
-}
-.progress-fill { 
-    height: 100%; 
-    background: #58a6ff; 
-    border-radius: 10px; 
-}
+.skill-item { margin-bottom: 20px; }
+.skill-label { display: flex; justify-content: space-between; margin-bottom: 8px; font-size: 0.85rem; color: #8b949e; }
+.progress-bar { width: 100%; height: 8px; background: #30363d; border-radius: 10px; overflow: hidden; }
+.progress-fill { height: 100%; background: #58a6ff; border-radius: 10px; }
 
-/* Logic Map Card */
+/* --- Logic Flow (New) --- */
 .logic-card {
     flex: 1.2;
-    display: grid;
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
     gap: 15px;
 }
 .logic-step {
-    background: rgba(88, 166, 255, 0.1);
-    border: 1px dashed #58a6ff;
+    background: rgba(88, 166, 255, 0.05);
+    border: 1px dashed #30363d;
     padding: 15px;
     border-radius: 8px;
-    text-align: center;
     font-size: 0.9rem;
-    color: #58a6ff;
+}
+.logic-step strong { color: #58a6ff; display: block; font-size: 0.7rem; text-transform: uppercase; }
+
+/* --- Certification Cards --- */
+.cert-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+.cert-card {
+    background: #161b22;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid #30363d;
+    text-align: center;
+}
+.cert-img-container { height: 150px; display: flex; align-items: center; justify-content: center; margin-bottom: 15px; }
+.cert-img { max-width: 100%; max-height: 100%; object-fit: contain; }
+
+@media (max-width: 850px) {
+    .project-row { flex-direction: column; text-align: center; }
 }
